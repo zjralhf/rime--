@@ -90,6 +90,9 @@ local function load_aux_table()
 
     local aux_table = {}
     local file = io.open(rime_api.get_user_data_dir() .. "/lua/aux_code/moqi_aux_code.txt", "r")
+    if not file and rime_api.get_shared_data_dir then
+        file = io.open(rime_api.get_shared_data_dir() .. "/lua/aux_code/moqi_aux_code.txt", "r")
+    end
     if not file then
         M.aux_table = aux_table
         return aux_table
