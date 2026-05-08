@@ -8,11 +8,11 @@
 
 主要维护词库、词频。在雾凇词库的基础上删除了不健康词汇，删除了大量冷僻词（频率==1 且分词器分不出的词），删除/调整了诸如“的吧”、“的了”这种不是词的词。手动大量修改了字频 词频。第一步是做了减法。
 
-然后使用 745396750 字的高质量语料，进行分词，重新统计字频、词频，归一化，以达到更好的输入效果。全拼和双拼都可以使用。 
+然后使用 745396750 字的高质量语料，进行分词，重新统计字频、词频，归一化，以达到更好的输入效果。全拼和双拼都可以使用。
 
 根据最新评测结果（生成时间: 2026-04-25 16:49:02 +08:00），[白霜拼音](https://github.com/gaboolic/rime-frost)在不使用模型和使用相同模型的评测上，均取得最佳效果，同时也超越商业输入法（关闭云拼音）。参见评测：
 
-[查看rime各方案评测结果](https://github.com/gaboolic/rime-schema-compare/blob/main/report/latest.md) 
+[查看rime各方案评测结果](https://github.com/gaboolic/rime-schema-compare/blob/main/report/latest.md)
 
 [查看其他windows输入法评测结果](https://github.com/gaboolic/rime-schema-compare/blob/main/report/other_latest.md)
 
@@ -29,7 +29,7 @@
 - 符号 /fh 更多符号详见 <https://github.com/gaboolic/rime-frost/blob/master/symbols_v.yaml>
 - 带调韵母 /a /e /u 等
 - 日期与时间 rq sj xq dt ts
-- 开启句中任意辅助码 ` 使用说明：[句中任意辅助码](/lua/aux_lookup_filter.lua)  拆分说明：[墨奇辅助码拆分说明](https://moqiyinxing.chunqiujinjing.com/index/mo-qi-yin-xing-shuo-ming/fu-zhu-ma-shuo-ming/mo-qi-ma-chai-fen-shuo-ming) 
+- 开启句中任意辅助码 ` 使用说明：[句中任意辅助码](/lua/aux_lookup_filter.lua)  拆分说明：[墨奇辅助码拆分说明](https://moqiyinxing.chunqiujinjing.com/index/mo-qi-yin-xing-shuo-ming/fu-zhu-ma-shuo-ming/mo-qi-ma-chai-fen-shuo-ming)
   ![alt text](others/img/input-liuxingyusamantianji.gif)
 - 部件拆字反查 uU
 - unicode字符 U
@@ -43,9 +43,9 @@
 
 下载本仓库的压缩包 Code - Download ZIP（或者下载 [releases](https://github.com/gaboolic/rime-frost/releases) 最新的 source-code.zip），解压到如下路径即可
 
-- Windows: 
+- Windows:
+  - 安装[墨奇输入法windows版](https://github.com/gaboolic/moqi-im-windows)的自带方案。Rime配置文件夹在：`%APPDATA%\Moqi\Rime` （可以在右下角输入法右键打开菜单选用户文件夹）
   - 小狼毫：`%APPDATA%\Rime` （可以在右下角小狼毫输入法右键打开菜单选用户文件夹）复制完之后，去输入法设定里选择白霜拼音，然后重新部署
-  - 安装[墨奇输入法](https://github.com/gaboolic/moqi-im-windows)的自带方案。Rime配置文件夹在：`%APPDATA%\Moqi\Rime` （可以在右下角输入法右键打开菜单选用户文件夹）
   - 注：%APPDATA% 路径实际为 C:\Users\<USER>\AppData\Roaming
 - Mac
   - [鼠须管](https://github.com/rime/squirrel)路径为 `~/Library/Rime`
@@ -55,13 +55,12 @@
   - fcitx5 flatpak 版的路径 `~/.var/app/org.fcitx.Fcitx5/data/fcitx5/rime`
   - [ibus-rime](https://github.com/rime/ibus-rime)路径为 `~/.config/ibus/rime`
 - Android
+  - 安装[墨奇输入法安卓版](https://github.com/gaboolic/moqi-im-android)的自带方案。（可以输入法设置页面打开菜单输入zip下载链接来下载）白霜拼音nightly下载链接：<https://github.com/gaboolic/rime-frost/releases/download/nightly/rime-frost-schemas.zip> （有问题时再用最新release下载链接：<https://github.com/gaboolic/rime-frost/releases/latest/download/rime-frost-schemas.zip>）支持九键、二十六键、语音输入
   - [fcitx5-安卓版](https://github.com/fcitx5-android/fcitx5-android)路径为 `/Android/data/org.fcitx.fcitx5.android/files/data/rime`
   - [同文](https://github.com/osfans/trime)路径为 `/rime`
-- iOS 
+- iOS
   - [仓输入法](https://github.com/imfuxiao/Hamster)目前已内置，也可以通过【输入方案设置 - 右上角加号 - 方案下载 - 覆盖并部署】来更新白霜拼音。
   - [元书输入法](https://ihsiao.com/apps/hamster/v3/docs/) 白霜拼音nightly下载链接：<https://github.com/gaboolic/rime-frost/releases/download/nightly/rime-frost-schemas.zip> （有问题时再用最新release下载链接：<https://github.com/gaboolic/rime-frost/releases/latest/download/rime-frost-schemas.zip>）
-
-
 
 #### 通过 Git 安装
 
@@ -106,6 +105,7 @@
 ![alt text](others/img/衍射.png)
 
 ### 多整句、句中任意辅助码
+
 ![alt text](others/img/input-liuxingyusamantianji.gif)
 
 ### 不同方案整句效果对比
@@ -114,7 +114,7 @@
 
 [查看最新评测结果](https://github.com/gaboolic/rime-schema-compare/blob/main/report/latest.md)
 
-###  语言模型
+### 语言模型
 
 语言模型说明见 [rime-octagram-data.txt](others/语言模型相关/rime-octagram-data.txt)
 
@@ -141,7 +141,6 @@ patch:
 - [墨奇模型](https://github.com/gaboolic/rime-build-grammar)
 - [万象模型](https://github.com/amzxyz/RIME-LMDG/releases/tag/LTS)
 
-
 ### 鸣谢
 
 雾凇词库 <https://github.com/iDvel/rime-ice> 白霜词库的初始词库、绝大部分配置来自雾凇词库
@@ -165,6 +164,8 @@ kenlm 教程、python 调用 <https://github.com/mattzheng/py-kenlm-model>
 使用白霜词库的方案
 
 墨奇输入法windows版 <https://github.com/gaboolic/moqi-im-windows>
+
+墨奇输入法android版 <https://github.com/gaboolic/moqi-im-android>
 
 墨奇音形 <https://github.com/gaboolic/rime-shuangpin-fuzhuma>
 
